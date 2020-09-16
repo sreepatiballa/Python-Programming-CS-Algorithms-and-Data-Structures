@@ -1,0 +1,136 @@
+Notes from the Programming for Python Course
+Date : April 5, 2020
+____________________________________________________________
+Strings
+-> '' , " " , """ """
+-> if you want single quotes in a string, wrap the text in double quotes and vice versa
+-> three quotes are used for multiple line strings
+
+String concatination and slicing
+-> use + to concatinate two strings
+Ex :
+message = "Welcome to the course"
+name = "Mashrur"
+print(message + name)
+
+# We can add an empty space in there too
+print(message + " " + name)
+
+-> slicing a string use [:] or [::]
+
+Methods and Functions
+-> # We ran the following functions on strings
+# len(), type(), id(), dir()
+-> We ran the following string methods
+# capitalize(), upper(), lower(), strip(), find()
+# split(), join()
+
+Print Formatting
+stock_price = 1100
+print("Today's price for google stock is: " + stock_price)
+print("Today's price for google stock is:", stock_price)
+print("Today's price for google stock is: {}".format(stock_price))
+print(f"Today's price for google stock is: {stock_price}")
+
+Special Characters : \, \n, \t
+
+____________________________________________________________
+Numbers
+-> Numbers - Integers, floats, math, type casting, user input
+-> num_1 = input("Enter the first number: ") - this always stores the input as string,
+to do any math analysis convert it to int or float
+
+____________________________________________________________
+Branching
+
+-> if,else or if,elif,else
+
+if condition:
+    execute some code
+else:
+    execute some other code
+
+if condition:
+    execute some code
+elif other_condition:
+    execute some other code
+else:
+    execute some other code
+
+-> Booleans : > , < , <= , >= , == , !=
+
+
+____________________________________________________________
+lists, dictionaries, sets and tuples - Compound data types
+
+-> List: [] % can have variable data types ,  mutable, maintains order, indexed
+my_list = [1,2,3,4,5,6,7,'hello','world']
+print(my_list)
+
+-> Dictionary: {} % {key : value}
+my_dict = {'name':'john','course':'python'}
+print(my_dict)
+
+-> Set: {} % not key value pairs, don't allow duplicate value unlike lists, doesn't maintain order
+my_set = {1,6,2,'java','ruby',8,9,10,21,1000,'python',6}
+print(my_set) # One 6 from the set declaration will be removed
+
+-> Tuple: () % immutable, indexed, maintains order
+my_tuple = ('hello','world','night','king','says','bye',8,3)
+print(my_tuple)
+
+____________________________________________________________
+Lists - in depth
+
+Examples of things that you could do with lists
+
+1. Sort - sort(), sorted()
+2. Find - len(), min(), max(), in, indexing, slicing, count()
+3. Insert/remove - append(), insert(), extend(), remove(), pop()
+4. Sub-lists - slicing, in-place, copying
+5. Iteration - for loops, while loops
+
+ -> for more details of the usage of these functions check the file: lecture_lists_text_notes.py (ctrl+shift+p, open_this here)
+
+ ____________________________________________________________
+Dictionaries, sets and tuples - in depth
+
+-> Dictionary : {} # Dictionaries are key value pairs
+-> print(dictionary['key']) # to access the value of the key
+-> the values of the dictionaries can be re-assigned
+-> print(word_dict['b']['business'])
+-> # You can iterate through the key value pairs using a for loop
+for key, value in my_dictionary.items():
+    print(f'Key: {key}, Value: {value}')
+
+-> Tuples: () # Key thing to remember about tuples is they are immutable
+-> functions in the python return values as tuples **
+-> # You can 'unpack' the elements in a tuple by using tuple unpacking
+first_var, second_var, third_var = my_tuple
+-> You can find out if an item exists in your tuple using 'in'
+-> You can use index and slice notation on tuples
+-> You can iterate through the items in a tuple using a simple for loop
+
+
+-> Sets: {} # Sets are un-ordered collections of data with no duplicates
+-> If you have a list with duplicates, you can cast it to a set
+to get rid of duplicates fast
+-> You can find information in sets using 'in'
+-> You can iterate through items in a set using a simple for loop
+-> sets have mathematical operations like union, intersection, difference
+
+____________________________________________________________
+Iterators, for loops, generators, list comprehension
+
+-> for num in l:
+       sum = sum + num
+-> for num in range(len(l)):
+       sum += l[num]
+-> l1 = [randint(1,100) for num in range(25)]
+-> You can use the items method to get an iterable from a dictionary
+then you can iterate through the tuples of key value pairs that
+this provides to print them out, or use them in other ways
+
+
+____________________________________________________________
+While loops and more generators and functions
